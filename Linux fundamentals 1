@@ -1,0 +1,40 @@
+#!/bin/bash
+# linux_fundamentals_1.sh
+# Sərxan üçün: Linux əsas komandalar qısa izahlar
+
+# 1) echo - verilen metni ekrana cixarir
+# Nümunə: echo "Salam, Sərxan!"
+
+# 2) whoami - hazirki istifadəçi adını göstərir
+# Nümunə: whoami
+
+# 3) ls - cari qovluqdakı fayl və qovluqları siyahıya alir
+# Nümunə: ls -la /etc
+
+# 4) cd - kataloqu (qovluğu) dəyişdirir
+# Nümunə: cd /home/sarkhan && pwd
+
+# 5) cat - faylın məzmununu ekrana çap edir; faylları birləşdirmək olur
+# Nümunə: cat file.txt
+
+# 6) pwd - cari işçi qovluğun tam yolunu göstərir
+# Nümunə: pwd
+
+# 7) find - fayl sistemi daxilində fayl və qovluq axtarışi üçün alət
+# Nümunə: find . -type f -name "*.txt"
+
+# 8) grep - fayl və ya stream içində nümunəni axtarir və uyğun sətirləri göstərir
+# Nümunə: grep -n "password" /etc/passwd
+
+# 9) &  - əmrin sonuna qoyulsa, əmri fon (background) kimi işə salir
+# Nümunə: sleep 60 &
+
+# 10) && - iki əmri sıralı icra edir; ilk uğurlu olarsa (exit 0) ikincini icra edir
+# Nümunə: mkdir test && cd test
+
+# 11) >  - komandanın çıxışını fayla yönləndirir; mövcud faylı üzərinə yazir (overwrite)
+# Nümunə: echo "Hello" > greeting.txt
+
+# 12) >> - komandanın çıxışını fayla əlavə edir (append); mövcud faylı saxlayır
+# Nümunə: echo "Yeni sətir" >> notes.txt
+
