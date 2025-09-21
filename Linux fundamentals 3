@@ -1,0 +1,52 @@
+# Linux Fundamentals Part 3 Write-Up
+
+# 1️⃣ Deploying the Linux Machine / AttackBox
+# Start your Linux machine and AttackBox (IP: 10.201.3.195, User: tryhackme, Password: tryhackme).
+
+# 2️⃣ Nano (Text Editor)
+# Create/edit files: nano myfile
+# Save: Ctrl+O → Exit: Ctrl+X
+# Useful shortcuts: Ctrl+W (search), Ctrl+_ (go to line), Ctrl+K/U (cut/paste)
+
+# 3️⃣ VIM (Advanced Editor)
+# Open file: vim myfile
+# Features: syntax highlighting, custom shortcuts, works on all terminals
+
+# 4️⃣ Downloading Files (wget)
+# Download a file from the web: wget <url>
+
+# 5️⃣ Transferring Files (SCP)
+# Local → Remote: scp important.txt ubuntu@192.168.1.30:/home/ubuntu/transferred.txt
+# Remote → Local: scp ubuntu@192.168.1.30:/home/ubuntu/documents.txt notes.txt
+
+# 6️⃣ Serving Files (Python HTTPServer)
+# Start server: python3 -m http.server
+# Download file: wget http://<host-ip>:8000/myfile
+# Stop server: Ctrl+C
+
+# 7️⃣ Processes
+# List processes: ps aux, top
+# Kill process: kill <PID> (SIGTERM, SIGKILL, SIGSTOP)
+# Background process: command &
+# Pause process: Ctrl+Z
+# Foreground: fg
+
+# 8️⃣ Crontabs (Automation)
+# Edit crontab: crontab -e
+# Example: 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/
+# Run script on boot: @reboot /var/opt/processes.sh
+
+# 9️⃣ Package Management & Repositories
+# Add GPG key: wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+# Add repository: echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+# Update apt & install: sudo apt update && sudo apt install sublime-text
+# Remove repo: sudo add-apt-repository --remove ppa:PPA_Name/ppa
+# Remove package: sudo apt remove sublime-text
+
+# 🔟 Logs
+# Apache logs: sudo cat /var/log/apache2/access.log
+# Get visitor IP: sudo tail -n 1 /var/log/apache2/access.log | awk '{print $1}'
+# Monitor fail2ban/UFW logs in /var/log/
+
+# ✅ Summary
+# This module covered terminal editors, downloading/serving files, process management, crontabs, package management, and log monitoring.
