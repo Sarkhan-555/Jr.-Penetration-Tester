@@ -1,0 +1,46 @@
+# Linux Fundamentals 2 – Bash Write-up
+
+# 1. Fayl yaratmaq
+# touch əmri boş fayl yaratmaq üçün istifadə olunur
+touch myfile.txt
+
+# 2. Qovluq yaratmaq
+# mkdir əmri yeni qovluq yaratmaq üçün istifadə olunur
+mkdir myfolder
+
+# 3. Fayl kopyalamaq
+# cp əmri faylı və ya qovluğu kopyalayır
+cp myfile.txt myfile_copy.txt
+
+# 4. Fayl köçürmək və ya adını dəyişmək
+# mv əmri faylı qovluğa köçürmək və ya adını dəyişmək üçün istifadə olunur
+mv myfile_copy.txt myfile_renamed.txt
+
+# 5. Faylı silmək
+rm myfile.txt
+
+# 6. Qovluğu rekursiv silmək
+rm -R myfolder
+
+# 7. Faylın növünü yoxlamaq
+file myfile_renamed.txt
+
+# 8. Qovluğun içindəkiləri siyahıya almaq
+ls            # sadə siyahı
+ls -l         # detallı siyahı
+ls -lh        # detallı siyahı, ölçülər oxunaqlı formatda
+ls -a         # gizli fayllar daxil olmaqla bütün faylları göstərir
+
+# 9. İstifadəçilər arasında keçid
+# su əmri ilə digər istifadəçiyə keçid
+su -l user2
+
+# 10. Əsas root qovluqları
+# /etc – sistem faylları, parollar, sudo icazələri
+ls /etc
+# /var – dəyişən məlumatlar, log faylları, müvəqqəti məlumat
+ls /var
+# /root – root istifadəçisinin ev qovluğu
+ls /root
+# /tmp – müvəqqəti fayllar, hər kəsin yazı yaza bildiyi qovluq
+ls /tmp
